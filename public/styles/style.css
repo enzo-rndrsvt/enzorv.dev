@@ -93,3 +93,38 @@ header a:hover {
   align-items: center;
   gap: 20px;
 }
+
+
+@media (max-width: 768px) {
+  /* Réduction de la taille de la police dans le header */
+  header > div {
+    font-size: 16px;
+  }
+  
+  /* Ajustement de la navigation */
+  .header-nav a {
+    padding-right: 20px;
+  }
+
+  /* Réduction de la marge et de l'espacement du contenu principal */
+  #aproposCible {
+    flex-direction: column;
+    gap: 20px;
+    margin: 100px auto 0;
+  }
+
+  /* Ajustement de la taille de l'image */
+  #aproposCible img {
+    width: 50%;
+    border-radius: 10px;
+  }
+
+  /* Réduction de la taille du texte du titre et du paragraphe */
+  #aproposCible h2 {
+    font-size: 40px;
+  }
+
+  #aproposCible p {
+    font-size: 16px;
+  }
+}
