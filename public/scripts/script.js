@@ -12,22 +12,7 @@ function activateLink(linkId) {
   document.getElementById(linkId).classList.add("active-link");
 }
 
-// Fonction pour gérer le défilement et activer le lien correspondant
-function handleScroll() {
-  sections.forEach(({ trigger, target }) => {
-    const section = document.getElementById(target);
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const scrollPosition = window.scrollY + 60; // ajustement pour la hauteur du header
 
-    if (
-      scrollPosition >= sectionTop &&
-      scrollPosition < sectionTop + sectionHeight
-    ) {
-      activateLink(trigger);
-    }
-  });
-}
 
 // Écouteur d'événements pour le clic, pour faire défiler vers la section correspondante
 sections.forEach(({ trigger, target }) => {
@@ -40,5 +25,4 @@ sections.forEach(({ trigger, target }) => {
   });
 });
 
-// Écouteur d'événements pour le défilement
-document.addEventListener("scroll", handleScroll);
+
