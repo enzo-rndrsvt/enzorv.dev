@@ -574,3 +574,37 @@ header a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 1200px) {
+  #aproposCible {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  #aproposCible img {
+    width: 50%;
+    margin: 0 auto; /* Centrage horizontal */
+  }
+}
+
+@media (max-width: 768px) {
+  #aproposCible img {
+    width: 70%;
+    margin: 0 auto; /* Centrage horizontal */
+  }
+
+  .timeline-horizontal {
+    display: flex;
+    margin: 0 auto;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  #aproposCible img {
+    width: 80%;
+    margin: 0 auto; /* Centrage horizontal */
+  }
+}
