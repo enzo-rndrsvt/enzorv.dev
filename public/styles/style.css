@@ -480,3 +480,97 @@ header a:hover {
 
 
 
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  #aproposCible {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  #aproposCible img {
+    width: 50%;
+  }
+
+  #aproposCible h2 {
+    font-size: 50px;
+  }
+
+  #aproposCible p {
+    font-size: 18px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  header > div {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #aproposCible img {
+    width: 70%;
+  }
+
+  #aproposCible h2 {
+    font-size: 40px;
+  }
+
+  .skills-container {
+    gap: 20px;
+  }
+
+  .timeline-horizontal {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .timeline-bubble {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #aproposCible h2 {
+    font-size: 30px;
+  }
+
+  #aproposCible p {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .header-nav a {
+    padding-right: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .project-image {
+    max-width: 90%;
+  }
+
+  #contactCible {
+    padding: 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
