@@ -608,3 +608,17 @@ header a:hover {
 
 
 
+
+
+.announcement-banner {
+  background-color: var(--cl-bg2);
+  color: var(--cl-grey);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  border-bottom: 3px solid var(--cl-bg1);
+}
+
+.spanDate {
+  color: var(--cl-white);
+}
