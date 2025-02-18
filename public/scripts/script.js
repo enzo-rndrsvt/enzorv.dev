@@ -11,8 +11,6 @@ function activateLink(linkId) {
   document.getElementById(linkId).classList.add("active-link");
 }
 
-
-
 sections.forEach(({ trigger, target, block }) => {
   const element = document.getElementById(trigger);
   const cible = document.getElementById(target);
@@ -23,13 +21,10 @@ sections.forEach(({ trigger, target, block }) => {
   });
 });
 
-
-
-
 function openPreview(imageElement) {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-  
+
   lightboxImg.src = imageElement.src;
   lightbox.style.display = "flex";
 }
@@ -38,6 +33,3 @@ function closePreview() {
   const lightbox = document.getElementById("lightbox");
   lightbox.style.display = "none";
 }
-
-
-
