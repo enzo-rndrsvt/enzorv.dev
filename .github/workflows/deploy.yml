@@ -14,9 +14,10 @@ jobs:
     - name: Deploy to Server
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
+        host: 69.62.106.92
+        username: root
         key: ${{ secrets.DEPLOY_KEY }}
+        port: 22
         script: |
-          cd ${{ secrets.REMOTE_WEB_PATH }}
-          git pull origin main
+          echo "Test connection"
+          hostname
