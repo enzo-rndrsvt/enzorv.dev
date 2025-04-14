@@ -1,25 +1,20 @@
 name: Deploy Portfolio
-
 on:
   push:
     branches: [ "main" ]
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: Production
-    
     steps:
     - uses: actions/checkout@v3
     
-    - name: Deploy to Server
+    - name: Setup SSH
       uses: appleboy/ssh-action@master
       with:
-        host: 69.62.106.92
-        username: root
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.DEPLOY_KEY }}
-        port: 22
         script: |
-          echo "Test connection"
-          hostname
+          echo "Connexion réussie"
+          pwd
+          ls -la
