@@ -8,13 +8,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    - name: Setup SSH
+    - name: Deploy to Server
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.DEPLOY_HOST }}
-        username: ${{ secrets.DEPLOY_USER }}
+        host: 69.62.106.92
+        username: root
         key: ${{ secrets.DEPLOY_KEY }}
+        port: 22
         script: |
-          echo "Connexion réussie"
-          pwd
-          ls -la
+          echo "Test connection"
+          hostname
