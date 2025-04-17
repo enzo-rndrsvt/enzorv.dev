@@ -294,12 +294,12 @@ header a:hover {
 
 .project-carousel {
   display: flex;
-  justify-content: center; /* Centrage du carousel */
+  justify-content: center;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 20px;
   padding: 20px 0;
-  max-width: 100%; /* Assure que le carousel ne dépasse pas la largeur du conteneur */
+  max-width: 100%; 
   scrollbar-width: thin;
   scrollbar-color: var(--cl-grey) transparent;
   -webkit-overflow-scrolling: touch;
@@ -308,6 +308,7 @@ header a:hover {
   cursor: grab;
   user-select: none;
   touch-action: pan-x;
+  
 }
 
 .project-carousel.active {
@@ -315,7 +316,7 @@ header a:hover {
 }
 
 .project-carousel::-webkit-scrollbar {
-  display: none; /* Cache la scrollbar sur webkit */
+  display: none;
 }
 
 .project-carousel::-webkit-scrollbar {
@@ -341,6 +342,11 @@ header a:hover {
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-carousel .project-card {
+  scroll-snap-align: center;
+  flex-shrink: 0;
 }
 
 .project-header {
