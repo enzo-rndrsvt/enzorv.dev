@@ -1,35 +1,47 @@
-const sections = [
-    { trigger: "c1Target", target: "c1Cible", block: "start" },
-    { trigger: "c2Target", target: "c2Cible", block: "start" },
-    { trigger: "c3Target", target: "c3Cible", block: "start" },
-    { trigger: "c4Target", target: "c4Cible", block: "start" },
-    { trigger: "c5Target", target: "c5Cible", block: "start" },
-    { trigger: "c6Target", target: "c6Cible", block: "start" },
-    { trigger: "c7Target", target: "c7Cible", block: "start" },
-    { trigger: "stageTarget", target: "stageCible", block: "start" },
-  ];
-  
-  function activateLink(linkId) {
-    document.querySelectorAll("header a").forEach((link) => {
-      link.classList.remove("active-link");
-    });
-    document.getElementById(linkId).classList.add("active-link");
-  }
-  
-  
-  
-  sections.forEach(({ trigger, target, block }) => {
-    const element = document.getElementById(trigger);
-    const cible = document.getElementById(target);
-  
-    element.addEventListener("click", function (e) {
-      e.preventDefault();
-      cible.scrollIntoView({ behavior: "smooth", block: block });
-    });
-  });
-  
-  
+const pages = document.querySelectorAll('.page');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const pageNumberSpan = document.getElementById('pageNumber');
 
-  
-  
-  
+let currentPageIndex = 0;
+
+function updatePage() {
+    // Masquer toutes les pages
+    pages.forEach(page => page.classList.remove('active'));
+    
+    // Afficher la page courante
+    pages[currentPageIndex].classList.add('active');
+    
+    // Mettre à jour le numéro de page
+    // pageNumberSpan.textContent = `${currentPageIndex + 1} / ${pages.length}`;
+    if (currentPageIndex + 1 === 7){
+        pageNumberSpan.textContent = `Culture générale`;
+    } else if (currentPageIndex + 1 === 8){
+        pageNumberSpan.textContent = `Profil professionnel`;
+    } else {
+        pageNumberSpan.textContent = `Compétences ${currentPageIndex + 1}`
+    }
+    
+    // Gérer l'état des boutons
+    prevBtn.disabled = currentPageIndex === 0;
+    nextBtn.disabled = currentPageIndex === pages.length - 1;
+}
+
+prevBtn.addEventListener('click', () => {
+    if (currentPageIndex > 0) {
+        currentPageIndex--;
+        updatePage();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if (currentPageIndex < pages.length - 1) {
+        currentPageIndex++;
+        updatePage();
+    }
+});
+
+// Initialisation
+updatePage();
+
+
