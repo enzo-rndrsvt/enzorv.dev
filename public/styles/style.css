@@ -218,6 +218,8 @@ header a:hover {
   z-index: 2;
 }
 
+
+
 .date {
   display: block;
   font-size: 14px;
@@ -245,8 +247,6 @@ header a:hover {
   color: var(--cl-grey);
   margin: 5px 0;
 }
-
-
 
 
 .svg-separator1 {
@@ -731,4 +731,4 @@ header a:hover {
 
 .spanDate {
   color: var(--cl-white);
-}
+} 
