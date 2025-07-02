@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enzorv.dev/sitemap.xml
+
+Disallow: /ressources/
+Disallow: /*.pdf$
+Disallow: /portfolio.html
